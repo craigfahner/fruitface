@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fruit Face</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background: #000;
+        color: #ccc;
+        font-family: monospace;
+      }
+      /* canvas sits at the top-left corner so OBS window capture is easy to crop */
+      canvas {
+        display: block;
+      }
+      #status {
+        order: 1; /* p5 appends the canvas last; this keeps the status below it */
+        padding: 6px 8px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- status lives outside the canvas so it never ends up in the captured feed -->
+    <div id="status">loading face landmarker...</div>
+    <script src="p5.js"></script>
+    <script src="pickCamera.js"></script>
+    <script src="fruitFilter.js"></script>
+    <script src="fruitface.js"></script>
+  </body>
+</html>
