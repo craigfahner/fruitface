@@ -20,12 +20,38 @@
         order: 1; /* p5 appends the canvas last; this keeps the status below it */
         padding: 6px 8px;
         font-size: 12px;
+        width:640px;
+      }
+      #obs-instructions {
+        order: 1; /* p5 appends the canvas last; this keeps the status below it */
+        padding: 6px 8px;
+        font-size: 12px;
+        width: 640px;
+      }
+      a {
+        color: aqua;
       }
     </style>
   </head>
   <body>
     <!-- status lives outside the canvas so it never ends up in the captured feed -->
     <div id="status">loading face landmarker...</div>
+    <div id="obs-instructions"><p>To replace your webcam's image with this fruit-filtered version...</p>
+    <p>
+      <ul>
+        <li><a href="https://obsproject.com/download" target="_blank">Download OBS</a>, an open source video streaming and capture program</li>
+        <li>open this fruitface filter in its own browser window</li>
+        <li>open OBS, click on settings. navigate to the "video" tab. set both the Base and Output resolution to <em>1280x960</em>.</li>
+        <li>in OBS, create a new window capture, selecting the browser window that contains the fruitface filter</li>
+        <li>move the image in the preview canvas so that the video image fills the canvas completely</li>
+        <li>click on "Start Virtual Camera". This will create a virtual camera device on your computer</li>
+        <li>select "OBS Virtual Camera" as your webcam in Zoom/Teams/whatever you like</li>
+      </ul>
+    </p>
+    <p>
+      <a href="https://www.github.com/craigfahner" target="_blank">Craig Fahner 2026</a>
+    </p>
+    </div>
     <script src="p5.js"></script>
     <script src="pickCamera.js"></script>
     <script src="fruitFilter.js"></script>
